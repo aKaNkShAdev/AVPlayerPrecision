@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-e9-OCh">
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.74117647060000003" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="261" id="Hkh-CO-Tn7"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WG-rW-YtC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="XJF-Ge-O1A"/>
+                                    <constraint firstAttribute="height" constant="30" id="iBV-wp-tD3"/>
+                                </constraints>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="btnPreviousClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6A7-On-CW8"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g7T-hE-1Sz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LrH-2y-nAd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lNx-0B-vWi"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-ej-vEp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xp1-tZ-M10"/>
+                                    <constraint firstAttribute="width" constant="32" id="w9X-ta-I7y"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="btnNextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHX-PV-YhD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g7T-hE-1Sz" secondAttribute="trailing" id="4mH-Lt-aXE"/>
+                            <constraint firstItem="5WG-rW-YtC" firstAttribute="top" secondItem="DhF-e9-OCh" secondAttribute="bottom" constant="69" id="6j4-6e-UOb"/>
+                            <constraint firstItem="DhF-e9-OCh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HvK-L7-Jcv"/>
+                            <constraint firstItem="xFB-ej-vEp" firstAttribute="leading" secondItem="5WG-rW-YtC" secondAttribute="trailing" constant="58" id="KuD-88-dgU"/>
+                            <constraint firstItem="5WG-rW-YtC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="LQT-96-5EP"/>
+                            <constraint firstItem="xFB-ej-vEp" firstAttribute="leading" secondItem="5WG-rW-YtC" secondAttribute="trailing" constant="58" id="LwG-7M-Q1t"/>
+                            <constraint firstAttribute="trailing" secondItem="DhF-e9-OCh" secondAttribute="trailing" id="ZAa-Xl-LFJ"/>
+                            <constraint firstItem="xFB-ej-vEp" firstAttribute="top" secondItem="DhF-e9-OCh" secondAttribute="bottom" constant="69" id="ZUd-7K-bse"/>
+                            <constraint firstItem="g7T-hE-1Sz" firstAttribute="top" secondItem="5WG-rW-YtC" secondAttribute="bottom" constant="69" id="hIH-Iy-9ej"/>
+                            <constraint firstItem="g7T-hE-1Sz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l6h-2v-Ov2"/>
+                            <constraint firstItem="DhF-e9-OCh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vpK-5c-gPS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="xFB-ej-vEp" id="gNT-ns-Pxt"/>
+                        <outlet property="btnPrevious" destination="5WG-rW-YtC" id="UfZ-Pp-yAy"/>
+                        <outlet property="playerSlider" destination="g7T-hE-1Sz" id="k04-lL-w0H"/>
+                        <outlet property="playerView" destination="DhF-e9-OCh" id="PCg-OA-8cs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
